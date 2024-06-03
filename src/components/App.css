@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  display: block;
+  /*width: 100%;
+    height: auto;*/
+}
+
+ul li {
+  list-style: none;
+}
+
+.container{
+  padding: 0 20px;
+}
