@@ -1,0 +1,30 @@
+.mainBtn{
+    background-color: black;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px 54px;
+}
+
+.mainBtn:hover{
+    background-color: rgb(30, 30, 30);
+}
+
+.showBtn{
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px 54px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    transition: 150ms linear;
+}
+
+.showBtn:hover{
+    border-color: black;
+}

@@ -1,0 +1,19 @@
+.brandsSection{
+    padding: 50px 0;
+}
+
+.brandsList{
+    display: flex;
+    justify-content: space-between;
+}
+
+.brandsList li svg{
+    width: 100px;
+    height: 100px;
+    transition: 200ms linear;
+}
+
+
+.brandsList li:hover svg{
+    scale: 1.2;
+}

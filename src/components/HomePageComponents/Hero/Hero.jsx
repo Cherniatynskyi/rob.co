@@ -1,23 +1,24 @@
-import React from 'react'
+
 import { StandartButton } from '../../../utils/StandartButton'
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import css from './Hero.module.css'
+import img from '../../../images/hero.png'
 
 export const Hero = () => {
-  const navigate = useNavigate()
   return (
-    <div>
-        <div>
-            <h1>Find best ai helper</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea sed itaque illum soluta recusandae nostrum.</p>
-            <button onClick={() => navigate('/browse')}><StandartButton buttonText="Shop Now"></StandartButton></button>
-            
+    <section className={css.hero}>
+        <div className={css.heroTextWrap}>
+            <h1 className={css.heroTitle}>Find your best <br></br> AI home helper</h1>
+            <p className={css.heroSubtext}>Browse through the large number of brands that provide products with advanced artificial intelligence technologies that will help make the home routine much easier</p>
+            <NavLink to='/browse'><StandartButton buttonText="Shop Now"></StandartButton></NavLink>      
         </div>
-        <ul>
-            <li><span>200+</span><p>International Brands</p></li>
-            <li><span>200+</span><p>High-Quality Products</p></li>
-            <li><span>200+</span><p>Happy Customers</p></li>
+        <ul className={css.advList}>
+            <li className={css.advItem}><span>100 +</span><p>International Brands</p></li>
+            <li className={css.advItem}><span>300 +</span><p>High-Quality Products</p></li>
+            <li className={css.advItem}><span>20 000 +</span><p>Happy Customers</p></li>
         </ul>
-        <img src="#" alt="" />
-    </div>
+        <img className={css.heroImg} src={img} alt="" />
+        <div className={css.test}></div>
+    </section>
   )
 }

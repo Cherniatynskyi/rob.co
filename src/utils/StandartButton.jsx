@@ -1,7 +1,7 @@
-import React from 'react'
+import css from './styles.module.css'
 
 export const StandartButton = ({buttonText}) => {
   return (
-    <button>{buttonText}</button>
+    <button className={css.mainBtn}>{buttonText}</button>
   )
 }

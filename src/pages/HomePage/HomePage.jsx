@@ -12,12 +12,12 @@ const HomePage = () => {
         <Hero/>
         <BrandsStripe/>
 
-        <div>
+        <div style={{padding: '80px 0'}}>
             <ShowTitle title="NEW ARRIVALS"/>
             <ProductsShowList/>
             <ShowButton/>
         </div>
-        <div>
+        <div style={{padding: '80px 0'}}>
             <ShowTitle title="TOP SALLING"/>
             <ProductsShowList/>
             <ShowButton/>

@@ -1,0 +1,86 @@
+.content{
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+
+/* NAV */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.logo{
+    font-family: 'Orbitron';
+    font-size: 40px;
+}
+
+.navList{
+    display: flex;
+    gap: 50px;
+}
+
+.navItem{
+    font-size: 20px;
+    font-weight: 700;   
+}
+
+.navLink{
+    padding: 20px 0;
+    position: relative;
+    transition: linear 500ms;
+}
+
+.navLink::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.navLink:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
+/* CART BUTTON */
+
+
+
+.cartContainer{
+    position: relative;
+}
+
+.cartIcon svg{
+    transition: scale .3s;
+}
+
+.cartIcon:hover svg{
+    scale: 1.1;
+    fill: rgb(70, 70, 70);
+}
+
+.spanCart{
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
