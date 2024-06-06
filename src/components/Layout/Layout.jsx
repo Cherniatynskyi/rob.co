@@ -2,6 +2,7 @@ import { Suspense} from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import css from './Layout.module.css'
 import { FaCartShopping } from "react-icons/fa6";
+import { Footer } from "../Footer/Footer";
 
 export const Layout = () => {
   return (
@@ -24,49 +25,7 @@ export const Layout = () => {
                 <Outlet/>
               </main>
         </Suspense>
-        <footer>
-            <div>
-                <h2>Feedback title</h2>
-                <form action="">
-                    <input type="text" />
-                    <button>Subscribe</button>
-                </form>
-            </div>
-            <div>
-                <h3>ROB.CO</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quam.</p>
-                <ul>
-                    <li>Inst</li>
-                    <li>Twitter</li>
-                    <li>Facebook</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-            <ul>
-                <ul>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                </ul>
-                <ul>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                </ul>
-                <ul>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                    <li>Faq</li>
-                </ul>
-            </ul>
-            <div>
-                <p>@rights reserved</p>
-                <ul>Payments</ul>
-            </div>
-        </footer>
+        <Footer style={css.content} logoStyles={css.logo}/>
     </>
   )
 }

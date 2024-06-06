@@ -1,0 +1,162 @@
+.footerMainWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerFeedbackWrap{
+    background-color: black;
+    padding: 36px 64px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedbackTitle{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+    text-transform: uppercase;
+}
+
+.feedbackForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.feedbackInput{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 10px 20px 10px 40px;
+    color: black;
+    font-size: 16px;
+
+    width: 100%;
+}
+
+.feedbackInput::placeholder{
+    color: grey;
+}
+
+.feedbackInput:focus{
+    outline: 2px solid orange;
+}
+
+.inputWrap{
+    position: relative;
+}
+
+.inputIcon{
+    position: absolute;
+    fill: grey;
+    left: 15px;
+    top: 30%;
+}
+
+.formBtn{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 150ms linear;
+}
+
+.formBtn:hover{
+    background-color: rgb(234, 234, 234);
+    border: 1px solid black;
+}
+
+.footerMainWrap{
+    padding: 80px 0;
+    display: flex;
+
+}
+
+.subtext{
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+    margin-top: 10px;
+}
+
+.socialsList{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socialsItem{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 150ms linear;
+}
+
+.socialsItem:hover{
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+}
+
+.faqList{
+    display: flex;
+    gap: 140px;
+}
+
+.faqSubList{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+    color: grey;
+    font-weight: 300;
+}
+
+.faqSubList li{
+    cursor: pointer;
+    transition: 150ms linear;
+}
+
+.faqSubList li:hover{
+    color: black;
+}
+
+.faqTitle{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+
+.subFooterWrap{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 0;
+    color: grey;
+    border-top: 1px solid rgb(195, 195, 195);
+}
+
+.paymentsList{
+    display: flex;
+}
+
+.paymentsList li img{
+    width: 70px;
+}

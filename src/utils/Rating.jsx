@@ -5,7 +5,7 @@ import css from './styles.module.css'
 export const Rating = ({rating}) => {
   return (
     <div className={css.ratingWrap}>
-          {Array.apply(0, Array(Math.floor(rating))).map(i => {
+          {Array.apply(0, Array(Math.floor(rating))).map((el, i) => {
               return (<FaStar className={css.starIcon} key={i}/>)
           })}
           {!Number.isInteger(rating) && <FaStarHalf className={css.starIcon} />}
