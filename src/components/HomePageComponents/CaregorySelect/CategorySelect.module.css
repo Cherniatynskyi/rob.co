@@ -1,0 +1,49 @@
+.CategorySelectContainer{
+    background-color: #F0F0F0;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.CategorySelectList{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CategorySelectItem{
+    border-radius: 10px;
+    width: 30%;
+    height: 550px;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-color: white;
+    padding: 20px;
+
+    cursor: pointer;
+    transition: 200ms linear;
+}
+
+.CategorySelectItem:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    scale: 1.01;
+}
+
+.CategorySelectItem:first-child{
+    background-image: url('http://localhost:3000/rob.co/static/media/hero.4634d739f229087cc8fd.png');
+}
+
+.CategorySelectItem:nth-child(2n){
+    background-image: url('https://content2.rozetka.com.ua/goods/images/big/415700887.jpg');
+    background-position: 50% 80%;
+}
+
+.CategorySelectItem:nth-child(n+3){
+    background-image: url('https://content1.rozetka.com.ua/goods/images/big/252305257.jpg');
+}
+
+.categoryTitle{
+    font-size: 28px;
+    display: block;
+    margin: 15px 20px;
+    font-weight: bold;
+}

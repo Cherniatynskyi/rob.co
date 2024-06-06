@@ -1,0 +1,54 @@
+.reviews{
+    padding: 50px 0;
+}
+
+.titleWrap{
+    width: 50%;
+}
+
+.reviewsCard{
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 10px;
+
+    padding: 20px;
+    width: 90%;
+}
+
+.reviewName{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.reviewComment{
+    font-size: 16px;
+    line-height: 1.5;
+    color: grey;
+    margin-top: 10px;
+}
+
+
+
+
+
+.slider{
+    padding-bottom: 50px;
+
+    & ul{
+        li[class="slick-active"] button::before{
+            background-color: black
+        }
+
+       button::before{
+            content: '';
+            width: 100%;
+            height: 5px;
+            border-radius: 100px;
+            background-color: #333
+       }
+    }
+}

@@ -28,3 +28,15 @@
 .showBtn:hover{
     border-color: black;
 }
+
+/* RATING */
+
+
+.ratingWrap{
+    display: flex;
+    align-items: center;
+}
+
+.starIcon{
+    fill: gold;
+}
