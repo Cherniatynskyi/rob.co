@@ -1,7 +1,7 @@
 import css from './styles.module.css'
 
-export const StandartButton = ({buttonText}) => {
+export const StandartButton = ({buttonText, styleC}) => {
   return (
-    <button className={css.mainBtn}>{buttonText}</button>
+    <button className={`${css.mainBtn} ${styleC}`}>{buttonText}</button>
   )
 }

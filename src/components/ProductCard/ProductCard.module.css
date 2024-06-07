@@ -1,0 +1,31 @@
+.cardItem{
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 150ms linear;
+}
+
+.cardItem:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cardImg{
+    width: 250px;
+}
+
+.cardTitle{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.cardPrice{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
