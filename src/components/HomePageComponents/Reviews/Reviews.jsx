@@ -3,11 +3,11 @@ import css from './Reviews.module.css'
 import { SimpleSlider } from "./Slider"
 
 
-export const Reviews = () => {
+export const Reviews = ({reviews}) => {
   return (
     <section className={css.reviews}>
         <div className={css.titleWrap}><ShowTitle title='OUR HAPPY CUSTOMERS'/></div>
-        <SimpleSlider></SimpleSlider>
+        <SimpleSlider reviews={reviews}/>
     </section>
   )
 }

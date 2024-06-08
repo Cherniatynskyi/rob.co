@@ -1,18 +1,13 @@
 import {ProductCard} from '../../ProductCard/ProductCard'
 import css from './ProductList.module.css'
 
-export const ProductsList = () => {
+
+export const ProductsList = ({products}) => {
   return (
     <ul className={css.productsList}>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
+        {products.map(item => {
+          return <ProductCard key={item._id} item={item}/>
+        })}
     </ul>
   )
 }

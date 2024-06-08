@@ -4,7 +4,7 @@ import css from './Reviews.module.css'
 
 
 
-export const SimpleSlider = ({cards}) => {
+export const SimpleSlider = ({reviews}) => {
     var settings = {
       dots: true,
       infinite: true,
@@ -17,11 +17,7 @@ export const SimpleSlider = ({cards}) => {
     };
     return (
       <Slider className={css.slider} {...settings}>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
+        {reviews?.map(el => <ReviewCard key={Math.random()} review={el}/>)}
       </Slider>
     );
   }

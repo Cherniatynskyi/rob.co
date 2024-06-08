@@ -5,10 +5,9 @@ import { ProductCard } from '../../ProductCard/ProductCard';
 export const ProductsShowList = ({products}) => {
   return (
         <ul className={css.showList}>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
+          {products.map(item => {
+            return <ProductCard key={item._id} item={item}></ProductCard>
+          })}
         </ul>
   )
 }

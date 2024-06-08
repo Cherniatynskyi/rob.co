@@ -9,7 +9,7 @@ export const Rating = ({rating}) => {
               return (<FaStar className={css.starIcon} key={i}/>)
           })}
           {!Number.isInteger(rating) && <FaStarHalf className={css.starIcon} />}
-          <span>{rating} / 5</span>
+          <span>{rating} / 10</span>
     </div>
   )
 }

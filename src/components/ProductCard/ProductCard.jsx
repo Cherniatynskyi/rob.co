@@ -1,16 +1,17 @@
 import { Rating } from '../../utils/Rating';
 import css from './ProductCard.module.css'
-import img from '../../images/hero.png'
 
-export const ProductCard = () => {
-  const score = 3.5
+export const ProductCard = ({item}) => {
+  const score = item.reviews.reduce((avgScore, el) => {
+    return avgScore + parseInt(el.score)
+  }, 0)
   return (
     <li className={css.cardItem}>
-        <img className={css.cardImg} src={img} alt="" />
+        <img className={css.cardImg} src={item.photo_urls[0]} alt="" />
         <div>
-          <h3 className={css.cardTitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-          <Rating rating={score}/>
-          <p className={css.cardPrice}>$120</p>
+          <h3 className={css.cardTitle}>{item.title}</h3>
+          <Rating rating={score / item.reviews.length}/>
+          <p className={css.cardPrice}>₴ {item.price}</p>
         </div>
     </li>
   )
