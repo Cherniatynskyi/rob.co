@@ -3,17 +3,54 @@ import css from './Filter.module.css'
 import Slider from "react-slider";
 import { useState } from "react";
 import {StandartButton} from '../../../utils/StandartButton'
+import { useDispatch } from "react-redux";
+import { setFilter } from "../../../redux/Items/itemsSlice";
 
 export const Filter = () => {
+
+  const dispatch = useDispatch()
 
   const MIN = 1000
   const MAX = 30000
   const [priceValues, setPriceValues] = useState([MIN, MAX])
+  const [colorValue, setColorValue] = useState('all')
+  const [categoryValue, setCategoryValue] = useState('all')
+
+
+  const onSubmit = (e) =>{
+    e.preventDefault()
+    const filterValues = {
+        category: categoryValue,
+        pricemin: priceValues[0],
+        pricemax: priceValues[1],
+        color: colorValue
+    }
+    dispatch(setFilter(filterValues))
+  }
+
+  const handleCategoryChange = (e) =>{
+    setCategoryValue(e.target.value)
+  }
+
+  const handleColorChange = (e) =>{
+    setColorValue(e.target.value)
+  }
+
+  const resetFilters = () =>{
+    const resetedFilters = {
+      category: 'all',
+      pricemin: '0',
+      pricemax: '30000',
+      color: 'all'
+    }
+    dispatch(setFilter(resetedFilters))
+  }
 
   return (
     <div className={css.filterWrap}>
       <h2 className={css.filterTitle}>Filters <LuSettings2 color="grey"/></h2>
-        <form action="">
+      <button onClick={resetFilters}>Reset</button>
+        <form action="" onSubmit={onSubmit}>
           <fieldset className={css.typesSet}>
             <legend className={css.sectionTitle}>Product type</legend>
             <div className={css.typesWrap}>
@@ -21,8 +58,8 @@ export const Filter = () => {
                     <input               
                       type="radio"                  
                       name="icon"       
-                      required
-                      value='floor-vacuum'                  
+                      value='floor-vacuum'
+                      onChange={(e)=>handleCategoryChange(e)}                
                     />
                     <img className={css.checkmark} src="http://localhost:3000/rob.co/static/media/hero.4634d739f229087cc8fd.png" alt="" />
                 </label>
@@ -30,8 +67,8 @@ export const Filter = () => {
                     <input               
                       type="radio"                  
                       name="icon" 
-                      value='window-vacuum'       
-                      required                    
+                      value='window-vacuum'                
+                      onChange={(e)=>handleCategoryChange(e)}           
                     />
                     <img className={css.checkmark} src="https://content2.rozetka.com.ua/goods/images/big/415700887.jpg" alt="" />
                 </label>
@@ -40,7 +77,7 @@ export const Filter = () => {
                       type="radio"                  
                       name="icon"  
                       value='homepod'      
-                      required                    
+                      onChange={(e)=>handleCategoryChange(e)}                    
                     />
                     <img className={css.checkmark} src="https://content1.rozetka.com.ua/goods/images/big/252305257.jpg" alt="" />
                 </label>
@@ -80,9 +117,9 @@ export const Filter = () => {
                 <label  className={css.container}>
                     <input               
                       type="radio"                  
-                      name="color"       
-                      required
-                      value='white'                     
+                      name="color"                      
+                      value='white'  
+                      onChange={(e)=>handleColorChange(e)}                    
                     />
                     <div className={css.checkmark} />
                 </label>
@@ -90,8 +127,8 @@ export const Filter = () => {
                     <input               
                       type="radio"                  
                       name="color"       
-                      required
-                      value='black'                     
+                      value='black' 
+                      onChange={(e)=>handleColorChange(e)}                      
                     />
                     <div style={{backgroundColor:'black'}} className={css.checkmark} />
                 </label>
@@ -99,8 +136,8 @@ export const Filter = () => {
                     <input               
                       type="radio"                  
                       name="color"       
-                      required
-                      value='grey'                     
+                      value='grey'  
+                      onChange={(e)=>handleColorChange(e)}                     
                     />
                     <div style={{backgroundColor:'grey'}} className={css.checkmark} />
                 </label>

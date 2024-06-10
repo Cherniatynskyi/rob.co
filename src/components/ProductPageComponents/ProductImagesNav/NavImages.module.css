@@ -1,0 +1,59 @@
+.imgNavWrap{
+    display: flex;
+    gap: 100px;
+    padding-top: 100px;
+}
+
+
+.imagesControlsWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imageCont{
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    filter: brightness(50%);
+    transition: 150ms linear;
+}
+
+.image:hover{
+    filter: brightness(1);
+    border: 3px solid black;
+}
+
+.image[data-selected='true']{
+    filter: brightness(1);
+    border: 3px solid black;
+}
+
+.shownImgWrap{
+    width: 500px;
+}
+
+.shownImg{
+   height: 500px;
+   max-width: 500px;
+   border-radius: 12px;
+
+   transition: 250ms linear;
+   cursor: zoom-in;
+}
+
+.shownImg:hover{
+    scale: 1.3;
+ }

@@ -41,15 +41,15 @@ export const ItemsSlice = createSlice({
         error: '',
         filters: {
             category: 'all',
-            pricemin: '0',
-            pricemax: '30000',
+            pricemin: 0,
+            pricemax: 30000,
             color: 'all'
         },
         page: 1
     },
     reducers:{
         setFilter: (state, {payload})=>{
-            state.filters[payload.filter] = payload.value
+            state.filters = payload
         },
         incPage: (state)=>{
             state.page = state.page + 1

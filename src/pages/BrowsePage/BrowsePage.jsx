@@ -6,18 +6,13 @@ import { useDispatch, useSelector } from "react-redux"
 import { getCategoryThunk } from "../../redux/Items/operations"
 
 const BrowsePage = () => {
-  const page = 1
-  const color = 'all'
-  const pricemin = 0
-  const pricemax = 30000
-  const category = 'all'
-
   const dispatch = useDispatch()
   const {items} = useSelector(state => state.items)
+  const {filters} = useSelector(state => state.items)
 
   useEffect(() => {
-    dispatch(getCategoryThunk({page, category, pricemin, pricemax, color}))
-  }, [dispatch])
+    dispatch(getCategoryThunk({...filters}))
+  }, [dispatch, filters])
 
     return (
       <div style={{padding: "50px 0 80px 0", display:'flex', justifyContent: 'space-between'}}>

@@ -2,7 +2,7 @@
     width: 290px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     border-radius: 10px;
 
@@ -16,6 +16,7 @@
 
 .cardImg{
     width: 250px;
+    border-radius: 12px;
 }
 
 .cardTitle{
