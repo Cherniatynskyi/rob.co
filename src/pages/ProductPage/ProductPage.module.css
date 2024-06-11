@@ -1,0 +1,25 @@
+.subNav{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.subNavBtn{
+    box-sizing: border-box;
+    background-color: inherit;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 100px;
+    cursor: pointer;
+
+    transition: 150ms linear;
+}
+
+.subNavBtn:hover{
+    border-bottom: 2px solid black;
+}
+
+[data-selected="true"]{
+    border-bottom: 2px solid black;
+}

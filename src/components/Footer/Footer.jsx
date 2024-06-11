@@ -14,19 +14,19 @@ export const Footer = ({style, logoStyles}) => {
   return (
     <footer className={style}>
             <div className={css.footerFeedbackWrap}>
-                <h2 className={css.feedbackTitle}>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <h2 className={css.feedbackTitle}>БУДЬТЕ В курсі НАШИХ ОСТАННІХ ПРОПОЗИЦІЙ</h2>
                 <form className={css.feedbackForm} action="">
                     <label className={css.inputWrap} htmlFor="mail">
-                        <input type="email" name='mail' id='mail' placeholder='Enter your email address' className={css.feedbackInput} />
+                        <input type="email" name='mail' id='mail' placeholder='Введіть ваш email' className={css.feedbackInput} />
                         <FaRegEnvelope className={css.inputIcon}/>
                     </label>
-                    <button className={css.formBtn}>Subscribe to Newsletter</button>
+                    <button className={css.formBtn}>Підписатися на розсилку</button>
                 </form>
             </div>
             <div className={css.footerMainWrap}>
                 <div>
                     <h3 className={logoStyles}>ROB.CO</h3>
-                    <p className={css.subtext}>The best place to choose your AI helper</p>
+                    <p className={css.subtext}>Найкраще місце для вибору помічника зі ШІ</p>
                     <ul className={css.socialsList}>
                         <li><a className={css.socialsItem} href="https://instagram.com"><FaInstagram/></a></li>
                         <li><a className={css.socialsItem} href="https://x.com/home"><FaXTwitter/></a></li>
@@ -36,36 +36,36 @@ export const Footer = ({style, logoStyles}) => {
                 </div>
                 <ul className={css.faqList}>
                     <li>
-                        <h3 className={css.faqTitle}>Company</h3>
+                        <h3 className={css.faqTitle}>Компанія</h3>
                         <ul className={css.faqSubList}>
-                            <li>About</li>
-                            <li>Features</li>
-                            <li>Works</li>
-                            <li>Career</li>
+                            <li>Про нас</li>
+                            <li>Переваги</li>
+                            <li>Роботи</li>
+                            <li>Кар'єра</li>
                         </ul>
                     </li>
                     <li>
-                        <h3 className={css.faqTitle}>Help</h3>
+                        <h3 className={css.faqTitle}>Допомога</h3>
                         <ul className={css.faqSubList}>
-                            <li>Customers Support</li>
-                            <li>Delivery Details</li>
-                            <li>Terms & Conditions</li>
-                            <li>Privacy Policy</li>
+                            <li>Підтримка користувачів</li>
+                            <li>Інформація про доставку</li>
+                            <li>Правила та умови</li>
+                            <li>Політика конфіденційності</li>
                         </ul>
                     </li>
                     <li>
                         <h3 className={css.faqTitle}>Faq</h3>
                         <ul className={css.faqSubList}>
-                            <li>Account</li>
-                            <li>Manage Deliveries</li>
-                            <li>Orders</li>
-                            <li>Payments</li>
+                            <li>Акаунт</li>
+                            <li>Відслідкувати посилку</li>
+                            <li>Замовлення</li>
+                            <li>Оплата</li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <div className={css.subFooterWrap}>
-                <p>Rob.co © 2022-2024, All Rights Reserved</p>
+                <p>Rob.co © 2022-2024, Всі права захищені</p>
                 <ul className={css.paymentsList}>
                     <li><img src={badge} alt="" /></li>
                     <li><img src={badge2} alt="" /></li>

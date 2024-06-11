@@ -25,12 +25,12 @@ const HomePage = () => {
         <Hero/>
         <BrandsStripe/>
         <div style={{padding: '80px 0', borderTop: '1px solid rgb(203, 203, 203)'}}>
-            <ShowTitle title="NEW ARRIVALS"/>
+            <ShowTitle title="НОВИНКИ"/>
             <ProductsShowList products={newItems}/>
             <ShowButton/>
         </div>
         <div style={{padding: '80px 0', borderTop: '1px solid rgb(203, 203, 203)'}}>
-            <ShowTitle title="TOP SALLING"/>
+            <ShowTitle title="ТОП ПРОДАЖІВ"/>
             <ProductsShowList products={topItems}/>
             <ShowButton/>
         </div>

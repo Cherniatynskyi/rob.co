@@ -58,8 +58,33 @@ export const ItemsSlice = createSlice({
             state.page = state.page - 1
         },
         addCartItem: (state, {payload})=>{
-            state.cartItems.push(payload)}
-    },
+            state.cartItems.push(payload)
+        },
+        increaseCounter:  (state, {payload})=>{
+            const selected = state.cartItems.filter(el=> el.item.title === payload)
+            const target_copy = JSON.parse(JSON.stringify(selected))
+            const titles = state.cartItems.map(el => el.item.title)
+            const index = titles.indexOf(target_copy[0].item.title)
+
+            state.cartItems[index].quantity += 1
+        },
+        decreaseCounter:  (state, {payload})=>{
+            const selected = state.cartItems.filter(el=> el.item.title === payload)
+            const target_copy = JSON.parse(JSON.stringify(selected))
+            const titles = state.cartItems.map(el => el.item.title)
+            const index = titles.indexOf(target_copy[0].item.title)
+            
+            state.cartItems[index].quantity -= 1
+        },
+        deleteFromCart:  (state, {payload})=>{
+            const selected = state.cartItems.filter(el=> el.item.title === payload)
+            const target_copy = JSON.parse(JSON.stringify(selected))
+            const titles = state.cartItems.map(el => el.item.title)
+            const index = titles.indexOf(target_copy[0].item.title)
+
+            state.cartItems.splice(index, 1)
+        }
+        },
     extraReducers: (builder)=>{
         builder
         .addCase(getNewThunk.fulfilled, handleFulfilledGetNew)
@@ -70,4 +95,4 @@ export const ItemsSlice = createSlice({
     }
 })
 
-export const {setFilter, incPage, decPage, addCartItem} = ItemsSlice.actions
+export const {setFilter, incPage, decPage, addCartItem,increaseCounter, decreaseCounter,deleteFromCart} = ItemsSlice.actions

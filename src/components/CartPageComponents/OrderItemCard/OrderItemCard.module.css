@@ -1,0 +1,51 @@
+.orderItemWrap{
+    display: flex;
+    padding: 15px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 12px;
+}
+
+.orderItemImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+}
+
+.infoWrap{
+    margin-left: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.controlsWrap{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: end;
+    width: 150px;
+}
+
+.deleteBtn{
+    background-color: inherit;
+    color: grey;
+    font-size: 30px;
+    cursor: pointer;
+    width: 40px;
+
+    transition: 150ms linear;
+}
+
+.deleteBtn:hover{
+    color: black;
+}
+
+.price{
+    color: rgb(89, 89, 89);
+}
+
+.priceTotal{
+    font-weight: bold;
+}

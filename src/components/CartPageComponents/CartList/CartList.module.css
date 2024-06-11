@@ -1,0 +1,21 @@
+.orderListWrap{
+    width: 60%;
+}
+
+.orderList{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.cartTitle{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.marker{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 70px 0;
+}

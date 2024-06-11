@@ -1,7 +1,6 @@
 .imgNavWrap{
     display: flex;
-    gap: 100px;
-    padding-top: 100px;
+    gap: 70px;
 }
 
 
@@ -43,6 +42,7 @@
 
 .shownImgWrap{
     width: 500px;
+    height: 500px;
 }
 
 .shownImg{
@@ -56,4 +56,5 @@
 
 .shownImg:hover{
     scale: 1.3;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
  }

@@ -1,0 +1,21 @@
+.reviewsList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+
+    padding: 40px 0;
+
+}
+
+.reviewCardDetails{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.marker{
+    font-size: 26px;
+    margin: 50px 0;
+}

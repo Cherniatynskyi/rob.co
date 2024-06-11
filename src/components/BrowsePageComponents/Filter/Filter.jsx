@@ -48,11 +48,11 @@ export const Filter = () => {
 
   return (
     <div className={css.filterWrap}>
-      <h2 className={css.filterTitle}>Filters <LuSettings2 color="grey"/></h2>
-      <button onClick={resetFilters}>Reset</button>
+      <h2 className={css.filterTitle}>Фільтри <LuSettings2 color="grey"/></h2>
+      <button onClick={resetFilters}>Скинути</button>
         <form action="" onSubmit={onSubmit}>
           <fieldset className={css.typesSet}>
-            <legend className={css.sectionTitle}>Product type</legend>
+            <legend className={css.sectionTitle}>Тип продукту</legend>
             <div className={css.typesWrap}>
                 <label  className={css.container}>
                     <input               
@@ -84,7 +84,7 @@ export const Filter = () => {
           </div>
           </fieldset>
           <div>
-            <h3 className={css.sectionTitle}>Price</h3>
+            <h3 className={css.sectionTitle}>Ціна</h3>
             <span className={css.priceValues}>{`₴ ${priceValues[0]} --- ₴ ${priceValues[1]}`}</span>
             <Slider
               className={css.priceSlider}
@@ -112,7 +112,7 @@ export const Filter = () => {
           </div>
           <div>
           <fieldset className={css.typesSet}>
-            <legend className={css.sectionTitle}>Color</legend>
+            <legend className={css.sectionTitle}>Колір</legend>
             <div className={css.typesWrap}>
                 <label  className={css.container}>
                     <input               
@@ -144,7 +144,7 @@ export const Filter = () => {
           </div>
           </fieldset>
           </div>
-          <StandartButton styleC={css.styleBtn} type='submit' buttonText='Apply'></StandartButton>
+          <StandartButton styleC={css.styleBtn} type='submit' buttonText='Застосувати'></StandartButton>
         </form>
         
     </div>

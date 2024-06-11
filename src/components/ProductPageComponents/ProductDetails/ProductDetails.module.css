@@ -1,0 +1,39 @@
+.detailsList{
+    display: flex;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.keysList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.keyItem{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 40px;
+}
+
+.keyItem::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(203, 203, 203);
+}
+
+.valuesList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.valueItem{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}

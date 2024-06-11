@@ -1,0 +1,55 @@
+.orderWrap{
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 73px;
+    margin-left: 40px;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.orderSummTitle{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.strokesList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.summStroke{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.strokeText{
+    font-size: 20px;
+    color: grey;
+}
+
+.strokeValue{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.orderBtn{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.orderBtn:hover{
+    background-color: rgb(29, 29, 29);
+}
