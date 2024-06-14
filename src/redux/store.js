@@ -16,7 +16,7 @@ import {
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['items', 'cartItems'],
+    whitelist: ['items', 'cartItems', 'topItems', 'newItems', 'filters', 'totalItems', 'page'],
 };
 
 const persistedItemsReducer = persistReducer(persistConfig, ItemsSlice.reducer);

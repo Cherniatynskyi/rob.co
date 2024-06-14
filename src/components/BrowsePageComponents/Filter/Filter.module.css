@@ -1,6 +1,7 @@
 .filterWrap{
     min-width: 300px;
-    height: 650px;
+    max-width: 300px;
+    height: 700px;
     border: 1px solid rgb(206, 206, 206);
     border-radius: 12px;
     padding: 20px 30px;
@@ -84,6 +85,23 @@
 
   .priceValues{
     font-size: 16px;
+  }
+
+  .resetBtn{
+    margin-top: 20px;
+    margin-left: 25%;
+    background-color: rgb(227, 227, 227);
+    color: black;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 12px 34px;
+
+    transition: 150ms linear;
+  }
+
+  .resetBtn:hover{
+    background-color: rgb(219, 219, 219);
   }
 
   .styleBtn{

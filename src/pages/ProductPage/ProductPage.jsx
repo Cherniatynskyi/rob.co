@@ -9,10 +9,12 @@ import css from './ProductPage.module.css'
 
 const ProductPage = () => {
   const {id} = useParams()
-  const {items} = useSelector(state => state.items)
+  const {items, topItems, newItems} = useSelector(state => state.items)
   const [subMenuValue, setSubMenuValue] = useState('stats')
-  const currentItem = items.filter((el) => el._id === id)
+  const selectedItem = items.filter((el) => el._id === id).length > 0 ? items.filter((el) => el._id === id) : topItems.filter((el) => el._id === id)
+  const currentItem = selectedItem.length > 0 ? selectedItem : newItems.filter((el) => el._id === id)
 
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

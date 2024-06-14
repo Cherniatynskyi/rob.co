@@ -9,18 +9,23 @@ import badge2 from '../../images/Badge2.png'
 import badge3 from '../../images/Badge3.png'
 import badge4 from '../../images/Badge4.png'
 import badge5 from '../../images/Badge5.png'
+import { ToastContainer, toast } from 'react-toastify';
 
 export const Footer = ({style, logoStyles}) => {
+    const mailSendHandler = (e) =>{
+        e.preventDefault()
+        toast.success('Ви підписалися на розсилку!')
+    }
   return (
     <footer className={style}>
             <div className={css.footerFeedbackWrap}>
                 <h2 className={css.feedbackTitle}>БУДЬТЕ В курсі НАШИХ ОСТАННІХ ПРОПОЗИЦІЙ</h2>
-                <form className={css.feedbackForm} action="">
+                <form onSubmit={(e) => mailSendHandler(e)} className={css.feedbackForm} action="">
                     <label className={css.inputWrap} htmlFor="mail">
-                        <input type="email" name='mail' id='mail' placeholder='Введіть ваш email' className={css.feedbackInput} />
+                        <input required type="email" name='mail' id='mail' placeholder='Введіть ваш email' className={css.feedbackInput} />
                         <FaRegEnvelope className={css.inputIcon}/>
                     </label>
-                    <button className={css.formBtn}>Підписатися на розсилку</button>
+                    <button type='submit' className={css.formBtn}>Підписатися на розсилку</button>
                 </form>
             </div>
             <div className={css.footerMainWrap}>
@@ -74,6 +79,7 @@ export const Footer = ({style, logoStyles}) => {
                     <li><img src={badge5} alt="" /></li>
                 </ul>
             </div>
+            <ToastContainer />
         </footer>
   )
 }

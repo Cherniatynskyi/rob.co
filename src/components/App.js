@@ -2,8 +2,7 @@ import './App.css';
 import {Route, Routes} from 'react-router-dom'
 import { lazy } from 'react';
 import { Layout } from './Layout/Layout';
-// import { useEffect } from 'react';
-// import { useDispatch } from 'react-redux';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {

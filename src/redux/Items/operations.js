@@ -10,6 +10,6 @@ export const getTopSalesThunk = createAsyncThunk('cards/getTopSales', async()=>{
     return await getTopSales()
 })
 
-export const getCategoryThunk = createAsyncThunk('cards/getByOwner', async({page, category, pricemin, pricemax, color})=>{
+export const getCategoryThunk = createAsyncThunk('cards/getAll', async({page, category, pricemin, pricemax, color})=>{
     return await getCategory(page, category, pricemin, pricemax, color)
 })

@@ -15,5 +15,10 @@ export const getCategory = async (page, category, pricemin, pricemax, color) => 
     return response.data
 }
 
+export const getTotal = async () => {
+    const response = await axios({ url: `http://localhost:3003/api/items/total`, method: "GET" })
+    return response.data
+}
+
 
 

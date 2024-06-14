@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { addCartItem } from '../../../redux/Items/itemsSlice';
+import { toast } from 'react-toastify';
 
 export const CartController = ({item}) => {
     
@@ -23,13 +24,14 @@ export const CartController = ({item}) => {
 
     const handleAddToCart = () => {
         if(cartProducts.includes(item.title)){
-            alert("товар уже у корзині")
+            toast.warning('Цей товар уже у кошику!')
             return
         }
         const orderBody = {
             item,
             quantity: counter
         }
+        toast.success('Ви додали товар до кошика')
         dispatch(addCartItem(orderBody))
     }
 

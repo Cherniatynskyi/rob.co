@@ -11,6 +11,7 @@ const handleFulfilledGetNew = (state,{payload}) => {
     state.error = ''
 }
 
+
 const handleFulfilledGetTopSales = (state,{payload}) => {
     state.isLoading = false
     state.topItems = payload
@@ -19,7 +20,8 @@ const handleFulfilledGetTopSales = (state,{payload}) => {
 
 const handleFulfilledGetCategory = (state,{payload}) => {
     state.isLoading = false
-    state.items = payload
+    state.items = payload.items
+    state.totalItems = payload.total
     state.error = ''
 }
 
@@ -36,16 +38,17 @@ export const ItemsSlice = createSlice({
         newItems: [],
         topItems: [],
         items:[],
+        totalItems: null,
         cartItems: [],
+        page: 1,
         isLoading: false,
         error: '',
         filters: {
             category: 'all',
-            pricemin: 0,
+            pricemin: 100,
             pricemax: 30000,
             color: 'all'
         },
-        page: 1
     },
     reducers:{
         setFilter: (state, {payload})=>{
@@ -56,6 +59,9 @@ export const ItemsSlice = createSlice({
         },
         decPage: (state)=>{
             state.page = state.page - 1
+        },
+        setPage: (state, {payload})=>{
+            state.page = payload
         },
         addCartItem: (state, {payload})=>{
             state.cartItems.push(payload)
@@ -95,4 +101,4 @@ export const ItemsSlice = createSlice({
     }
 })
 
-export const {setFilter, incPage, decPage, addCartItem,increaseCounter, decreaseCounter,deleteFromCart} = ItemsSlice.actions
+export const {setFilter, incPage, decPage, setPage, addCartItem, increaseCounter, decreaseCounter,deleteFromCart} = ItemsSlice.actions

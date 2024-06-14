@@ -7,15 +7,15 @@ import { getCategoryThunk } from "../../redux/Items/operations"
 
 const BrowsePage = () => {
   const dispatch = useDispatch()
-  const {items} = useSelector(state => state.items)
-  const {filters} = useSelector(state => state.items)
+  const {items, filters, page} = useSelector(state => state.items)
 
   useEffect(() => {
-    dispatch(getCategoryThunk({...filters}))
-  }, [dispatch, filters])
+    dispatch(getCategoryThunk({...filters, page}))
+    window.scrollTo({top: 0,left: 0,behavior: "smooth",});
+  }, [dispatch, filters, page])
 
     return (
-      <div style={{padding: "50px 0 80px 0", display:'flex', justifyContent: 'space-between'}}>
+      <div style={{padding: "50px 0 80px 0", display:'flex'}}>
         <Filter/>
 
         <div>

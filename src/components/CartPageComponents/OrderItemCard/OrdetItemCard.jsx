@@ -3,6 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { Counter } from '../../../utils/Counter';
 import { useDispatch } from 'react-redux';
 import { deleteFromCart } from '../../../redux/Items/itemsSlice';
+import { toast } from 'react-toastify';
 
 export const OrdetItemCard = ({item, quantity}) => {
 
@@ -10,6 +11,7 @@ export const OrdetItemCard = ({item, quantity}) => {
 
     const handelDelete = () =>{
         dispatch(deleteFromCart(item.title))
+        toast.success(`(${item.title}) видалено з кошика`)
     }
 
   return (

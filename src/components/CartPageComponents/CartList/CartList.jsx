@@ -13,7 +13,7 @@ export const CartList = () => {
           return (
             <OrdetItemCard key={item.title} item={item} quantity={quantity}/>
           )
-        }) : <h3 className={css.marker}>Ваш кошик порожній</h3>}
+        }) : <h3 className={css.marker}>Ваш кошик порожній  🛒</h3>}
       </ul>
     </div>
   )
