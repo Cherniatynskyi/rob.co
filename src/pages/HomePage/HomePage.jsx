@@ -8,6 +8,7 @@ import { ShowButton } from "../../utils/ShowButton"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getNewThunk, getTopSalesThunk } from "../../redux/Items/operations"
+import {motion} from 'framer-motion'
 
 const HomePage = () => {
   const dispatch = useDispatch()
@@ -21,7 +22,7 @@ const HomePage = () => {
   }, [dispatch])
   
   return (
-    <>
+    <motion.div initial={{width: 0}} animate={{width: '100%'}} >
         <Hero/>
         <BrandsStripe/>
         <div style={{padding: '80px 0', borderTop: '1px solid rgb(203, 203, 203)'}}>
@@ -36,7 +37,7 @@ const HomePage = () => {
         </div>
         <CategorySelect/>
         <Reviews reviews={topReviews[0]}/>
-    </>
+    </motion.div>
   )
 }
 

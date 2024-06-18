@@ -4,6 +4,7 @@ import { ProductsList } from "../../components/BrowsePageComponents/ProductsList
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getCategoryThunk } from "../../redux/Items/operations"
+import {motion} from 'framer-motion'
 
 const BrowsePage = () => {
   const dispatch = useDispatch()
@@ -15,14 +16,14 @@ const BrowsePage = () => {
   }, [dispatch, filters, page])
 
     return (
-      <div style={{padding: "50px 0 80px 0", display:'flex'}}>
+      <motion.div initial={{x: '-100%'}} animate={{x: "0"}} style={{padding: "50px 0 80px 0", display:'flex'}}>
         <Filter/>
 
         <div>
             <ProductsList products = {items}/>
             <Pagintation/>
         </div>
-      </div>
+      </motion.div>
     )
 }
   

@@ -10,6 +10,7 @@ export const Layout = () => {
   return (
     <>
         <header className={`${css.content} ${css.header}`}>
+          
             <NavLink to='/'><h2 className={css.logo}>ROB.CO</h2></NavLink>
             <ul className={css.navList}>
                 <li className={css.navItem}><NavLink className={css.navLink} to='/browse'>Товари</NavLink></li>
@@ -28,6 +29,7 @@ export const Layout = () => {
               </main>
         </Suspense>
         <Footer style={css.content} logoStyles={css.logo}/>
+        
     </>
   )
 }

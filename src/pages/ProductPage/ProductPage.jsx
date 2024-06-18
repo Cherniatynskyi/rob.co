@@ -6,6 +6,8 @@ import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import css from './ProductPage.module.css'
+import {motion} from 'framer-motion'
+
 
 const ProductPage = () => {
   const {id} = useParams()
@@ -30,7 +32,7 @@ const ProductPage = () => {
   }
 
     return (
-      <>
+      <motion.div initial={{y: '-100%'}} animate={{y: "0"}}>
         <div style={{display: "flex", paddingTop: "100px"}}>
             <ProductImagesNav images={currentItem[0].photo_urls}/>
             <ProductInfo item={currentItem[0]}/>
@@ -41,7 +43,7 @@ const ProductPage = () => {
         </nav>
           { subMenuValue === 'stats' && <ProductDetails item={currentItem[0]}/>}
           { subMenuValue === 'reviews' && <ProductsReviews reviews={currentItem[0].reviews}/>}
-      </>
+      </motion.div>
     )
   }
   
