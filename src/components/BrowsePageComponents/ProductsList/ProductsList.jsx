@@ -1,11 +1,13 @@
 import {ProductCard} from '../../ProductCard/ProductCard'
 import css from './ProductList.module.css'
 import { NavLink } from 'react-router-dom'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 
 export const ProductsList = ({products}) => {
+  const [listRef] = useAutoAnimate()
   return (
-    <ul className={css.productsList}>
+    <ul className={css.productsList} ref={listRef}>
         {products.length > 0 ? products.map(item => {
           return <NavLink key={item._id} to={`${item._id}`}>
                     <ProductCard  item={item}/>

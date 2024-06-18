@@ -9,7 +9,7 @@ import badge2 from '../../images/Badge2.png'
 import badge3 from '../../images/Badge3.png'
 import badge4 from '../../images/Badge4.png'
 import badge5 from '../../images/Badge5.png'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export const Footer = ({style, logoStyles}) => {
     const mailSendHandler = (e) =>{
@@ -79,7 +79,6 @@ export const Footer = ({style, logoStyles}) => {
                     <li><img src={badge5} alt="" /></li>
                 </ul>
             </div>
-            <ToastContainer />
         </footer>
   )
 }

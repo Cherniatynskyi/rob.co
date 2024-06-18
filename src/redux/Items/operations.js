@@ -1,5 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import "react-toastify/dist/ReactToastify.css";
 import { getNew, getTopSales, getCategory } from "../../services/robcoApi";
 
 export const getNewThunk = createAsyncThunk('cards/getNew', async()=>{
