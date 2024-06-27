@@ -37,7 +37,8 @@
         }
       ],
       "sales": 103,
-      "photo_urls": ["https://content2.rozetka.com.ua/goods/images/big/334009479.jpg", "qewrqweqweqw"]
+      "photo_urls": ["https://content2.rozetka.com.ua/goods/images/big/334009479.jpg", "qewrqweqweqw"],
+      "preview_img": "https://content2.rozetka.com.ua/goods/images/big_tile/334009479.jpg"
   },
   {
   "category": "floor-vacuum", 

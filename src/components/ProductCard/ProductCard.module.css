@@ -15,7 +15,8 @@
 }
 
 .cardImg{
-    width: 250px;
+    width: 100%;
+    height: 220px;
     border-radius: 12px;
 }
 
