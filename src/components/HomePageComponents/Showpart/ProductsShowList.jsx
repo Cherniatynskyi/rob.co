@@ -7,7 +7,7 @@ export const ProductsShowList = ({products}) => {
   return (
         <ul className={css.showList}>
           {products.map(item => {
-            return <NavLink to={`/browse/${item._id}`} key={item._id}><ProductCard item={item}></ProductCard></NavLink>
+            return <NavLink to={`/browse/${item._id}`} key={item._id}><ProductCard item={item} style={css.card}></ProductCard></NavLink>
           })}
         </ul>
   )

@@ -5,6 +5,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { Footer } from "../Footer/Footer";
 import { useSelector } from "react-redux";
 
+import { IoMenu } from "react-icons/io5";
+
 export const Layout = () => {
   const {cartItems} = useSelector(state => state.items)
   return (
@@ -14,11 +16,11 @@ export const Layout = () => {
             <NavLink to='/'><h2 className={css.logo}>ROB.CO</h2></NavLink>
             <ul className={css.navList}>
                 <li className={css.navItem}><NavLink className={css.navLink} to='/browse'>Товари</NavLink></li>
-                <li className={css.navItem}><NavLink className={css.navLink} to='/browse'>Топ Продажів</NavLink></li>
                 <li className={css.navItem}><NavLink className={css.navLink} to='/browse'>Новинки</NavLink></li>
                 <li className={css.navItem}><NavLink className={css.navLink} to='/'>Партнери</NavLink></li>
             </ul>
             <div className={css.cartContainer}>
+                <button className={css.burgerBtn}><IoMenu /></button>
                 <NavLink className={css.cartIcon} to='/cart'><FaCartShopping size='24' /></NavLink>
                 {cartItems.length > 0 && <span className={css.spanCart}>{cartItems.length}</span>}
             </div>

@@ -3,6 +3,14 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1170px) {
+    .footerMainWrap{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
 .footerFeedbackWrap{
     background-color: black;
     padding: 36px 64px;
@@ -10,21 +18,49 @@
 
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        gap: 30px;
+    }
+    @media screen and (max-width: 500px) {
+        padding: 28px 38px;
+    }
 }
 
 .feedbackTitle{
     font-size: 40px;
     font-weight: bold;
     color: white;
-    width: 50%;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 825px) {
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 20px;
+    }
 }
 
 .feedbackForm{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 300px;
+    min-width: 300px;
+
+    @media screen and (max-width: 825px) {
+        min-width: 250px;
+    }
+
+    @media screen and (max-width: 500px) {
+        min-width: 150px;
+    }
 }
 
 .feedbackInput{
@@ -36,6 +72,7 @@
     font-size: 16px;
 
     width: 100%;
+
 }
 
 .feedbackInput::placeholder{
@@ -114,6 +151,15 @@
 .faqList{
     display: flex;
     gap: 140px;
+
+    @media screen and (max-width: 1170px) {
+        margin-top: 40px;
+        gap: 90px;
+    }
+
+    @media screen and (max-width: 620px) {
+        display: none;
+    }
 }
 
 .faqSubList{
@@ -151,10 +197,20 @@
     padding: 30px 0;
     color: grey;
     border-top: 1px solid rgb(195, 195, 195);
+
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
 }
 
 .paymentsList{
     display: flex;
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 }
 
 .paymentsList li img{

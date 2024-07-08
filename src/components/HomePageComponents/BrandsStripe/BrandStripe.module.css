@@ -1,5 +1,9 @@
 .brandsSection{
     padding: 50px 0;
+
+    @media screen and (max-width: 500px) {
+        padding: 20px 0;
+    }
 }
 
 .brandsList{
@@ -11,6 +15,16 @@
     width: 100px;
     height: 100px;
     transition: 200ms linear;
+
+    @media screen and (max-width: 1170px) {
+        width: 70px;
+        height: 70px;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 

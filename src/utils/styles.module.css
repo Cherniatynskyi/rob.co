@@ -39,6 +39,10 @@
 
 .starIcon{
     fill: gold;
+
+    @media screen and (max-width: 600px) {
+        font-size: 12px;
+    }
 }
 
 .score{

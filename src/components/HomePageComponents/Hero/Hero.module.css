@@ -2,6 +2,11 @@
     padding: 90px 0;
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: 750px) {
+        padding: 50px 0 50px;
+        position: static;
+    }
 }
 
 .heroTextWrap{
@@ -9,12 +14,28 @@
     flex-direction: column;
     width: 600px;
     gap: 20px;
+
+    @media screen and (max-width: 650px) {
+        width: 100%;
+    }
 }
 
 .heroTitle{
     font-size: 50px;
     text-transform: uppercase;
     font-weight: 900;
+
+    @media screen and (max-width: 1170px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 750px) {
+        font-size: 35px;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 22px;
+    }
 }
 
 .heroSubtext{
@@ -31,11 +52,25 @@
 .advList{
     display: flex;
     margin-top: 50px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 35px;
+        flex-direction: column;
+    }
 }
 
 .advItem{
     padding: 0 32px;
     border-right: 1px solid grey;
+
+    @media screen and (max-width: 750px) {
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 0;
+        border: none;
+    }
 }
 
 .advItem:first-child{
@@ -49,12 +84,24 @@
 .advItem span{
     font-size: 40px;
     font-weight: 700;
+
+    @media screen and (max-width: 1170px) {
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: 750px) {
+        font-size: 24px;
+    }
 }
 
 .advItem p{
     font-size: 16px;
     color: rgb(90, 90, 90);
     margin-top: 5px;
+
+    @media screen and (max-width: 1170px) {
+        font-size: 14px;
+    }
 }
 
 
@@ -62,12 +109,40 @@
 
 .heroImg{
     position: absolute;
-
     width: 600px;
     top: -20px;
     right: 0;
+    z-index: -1;
+
+    @media screen and (max-width: 1170px) {
+        opacity: 0.5;
+        width: 550px;
+        top: -30px;
+        right: -60px;
+    }
+
+    @media screen and (max-width: 750px) {
+        width: 500px;
+        top: 30px;
+        right: -60px;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 320px;
+        top: 170px;
+        right: -40px;
+    }
 
 }
+
+@media screen and (max-width: 1170px) {
+    .heroSubtext{
+        display: none;
+    }
+
+}
+
+
 
 .test{
     position: absolute;
@@ -79,5 +154,9 @@
     height: 400px;
     width: 20px;
     filter: blur(7px);
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
 
 }

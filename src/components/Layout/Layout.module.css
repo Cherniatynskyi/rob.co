@@ -2,6 +2,10 @@
     max-width: 1440px;
     padding: 0 40px;
     margin: auto;
+
+    @media screen and (max-width: 750px) {
+        padding: 0 25px;
+    }
 }
 
 
@@ -18,16 +22,41 @@
 .logo{
     font-family: 'Orbitron';
     font-size: 40px;
+
+    @media screen and (max-width: 1170px) {
+        font-size: 34px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 28px;
+    }
 }
 
 .navList{
     display: flex;
     gap: 50px;
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
+}
+
+.burgerBtn{
+    background-color: inherit;
+    font-size: 30px;
+
+    @media screen and (min-width: 750px) {
+        display: none;
+    }
 }
 
 .navItem{
     font-size: 20px;
-    font-weight: 700;   
+    font-weight: 700; 
+    
+    @media screen and (max-width: 1170px) {
+        font-size: 16px
+    }
 }
 
 .navLink{
@@ -59,6 +88,9 @@
 
 .cartContainer{
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .cartIcon svg{

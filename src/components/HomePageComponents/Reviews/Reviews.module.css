@@ -1,9 +1,11 @@
 .reviews{
     padding: 80px 0 100px;
+    margin-left: 20px;
 }
 
 .titleWrap{
-    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .reviewsCard{
