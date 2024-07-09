@@ -1,8 +1,25 @@
+.mainInfWrap{
+    display: flex;
+    padding-top: 100px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+}
+
 .subNav{
     width: 50%;
     display: flex;
     gap: 20px;
     padding: 50px 0;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        padding: 30px 0;
+        padding-top: 50px;
+    }
 }
 
 .subNavBtn{
@@ -14,6 +31,16 @@
     cursor: pointer;
 
     transition: 150ms linear;
+
+    @media screen and (max-width: 620px) {
+        font-size: 20px;
+        padding: 10px 50px;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
 }
 
 .subNavBtn:hover{

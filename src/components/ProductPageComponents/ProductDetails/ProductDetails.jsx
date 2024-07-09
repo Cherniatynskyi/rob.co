@@ -7,18 +7,26 @@ export const ProductDetails = ({item}) => {
       <div className={css.detailsList}>
         <ul className={css.keysList}>
           {Object.keys(item.techs).map(el => {
-            return (
-              <li key={el} className={css.keyItem}>
-                {el}
-              </li>
+            return (        
+                <li key={el} className={css.keyItem}>
+                  {el}
+                </li>   
             )
           })}
         </ul>
-        <ul className={css.valuesList}>
+        <ul className={css.keysList}>
+          {Object.keys(item.techs).map(el => {
+            return (        
+                <span key={el} className={css.span}>
+                </span>   
+            )
+          })}
+        </ul>
+        <ul className={css.keysList}>
           {Object.values(item.techs).map(el => {
             return (
-              <li key={el} className={css.valueItem}>
-                {el}
+              <li key={el} className={css.keyItem}>
+                {`${el}`.slice(0, 30)}
               </li>
             )
           })}

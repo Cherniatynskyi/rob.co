@@ -1,8 +1,20 @@
 .productsList{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
-    margin: -20px;
     margin-left: 50px;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1350px) {
+    .productsList{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .productsList{
+        margin: 0;
+    }
 }
 

@@ -1,0 +1,16 @@
+.pageWrap{
+    padding: 60px 0;
+    display: flex;
+}
+
+@media screen and (max-width: 900px) {
+    .pageWrap{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .pageWrap{
+        padding: 30px 0;
+    }
+}

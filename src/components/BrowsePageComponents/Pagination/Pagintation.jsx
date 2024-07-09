@@ -39,7 +39,7 @@ export const Pagintation = () => {
   return (
     <>
     {pagesTotal > 1 && <div className={css.pagWrap}>
-      <button className={css.button} onClick={decrpage} disabled={page===1}><FaArrowLeft/> Назад</button>
+      <button className={`${css.button} ${css.dec}`} onClick={decrpage} id='dec' disabled={page===1}><FaArrowLeft/> <span>Назад</span></button>
       {(pagesTotal < 4) &&
           <ul className={css.pagList}>
             {pages.map(el => {
@@ -91,7 +91,7 @@ export const Pagintation = () => {
             
         </ul>
       }
-      <button className={css.button} onClick={incrpage} disabled={page===pagesTotal}>Вперед <FaArrowRight/></button>
+      <button className={`${css.button} ${css.inc}`} onClick={incrpage} id='inc' disabled={page===pagesTotal}><span>Вперед</span> <FaArrowRight/></button>
     </div>}
     </>
   )

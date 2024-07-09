@@ -32,3 +32,33 @@
     font-weight: bold;
     margin-top: 15px;
 }
+
+@media screen and (max-width: 670px) {
+    .cardItem{
+        width: 250px;
+    }
+
+    .cardImg{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .cardItem{
+        width: 350px;
+    }
+
+    .cardImg{
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cardItem{
+        width: 280px;
+    }
+
+    .cardImg{
+        height: 220px;
+    }
+}

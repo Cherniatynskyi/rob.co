@@ -1,5 +1,6 @@
 .pagWrap{
     display: flex;
+    position: relative;
     margin-left: auto;
     justify-content: center;
     margin-top: 50px;
@@ -66,4 +67,38 @@
     border-color: rgb(213, 213, 213);
     cursor: not-allowed;
     color: rgb(83, 83, 83);
+}
+
+@media screen and (max-width: 750px) {
+    .button{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .button span{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .button{
+        position: absolute;
+        top: 140%;
+    }
+    .inc{
+        right: 32%;
+    }
+    .dec{
+        left: 32%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .inc{
+        right: 26%;
+    }
+    .dec{
+        left: 26%;
+    }
 }

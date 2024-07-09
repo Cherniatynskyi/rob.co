@@ -59,6 +59,7 @@
     background-color: rgb(238, 238, 238);
     border-radius: 20px;
     padding: 10px 20px;
+    font-size: 20px;
     width: 100%;
 
     display: flex;
@@ -68,7 +69,6 @@
 
 .counterButton{
     background-color: inherit;
-    font-size: 20px;
     width: 25px;
     height: 25px;
     display: flex;
@@ -79,6 +79,5 @@
 }
 
 .counterValue{
-    font-size: 24px;
     font-weight: bold;
 }

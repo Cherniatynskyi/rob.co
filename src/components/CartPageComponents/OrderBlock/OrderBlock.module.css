@@ -5,6 +5,7 @@
     margin-top: 73px;
     margin-left: 40px;
     width: 40%;
+    height: 350px;
 
     display: flex;
     flex-direction: column;
@@ -52,4 +53,45 @@
 
 .orderBtn:hover{
     background-color: rgb(29, 29, 29);
+}
+
+@media screen and (max-width: 1024px) {
+    .orderWrap{
+        height: 300px;
+    }
+    .orderBtn{
+        font-size: 18px;
+    }
+    .orderSummTitle{
+        font-size: 20px;
+    }
+    .strokeText{
+        font-size: 18px;
+    }
+    .strokeValue{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .orderWrap{
+        width: 100%;
+        margin: 0;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .orderBtn{
+        font-size: 14px;
+    }
+    .orderSummTitle{
+        font-size: 16px;
+    }
+    .strokeText{
+        font-size: 14px;
+    }
+    .strokeValue{
+        font-size: 16px;
+    }
 }

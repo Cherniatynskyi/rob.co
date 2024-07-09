@@ -49,3 +49,39 @@
 .priceTotal{
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 540px) {
+    .orderItemImg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .infoWrap{
+        font-size: 14px;
+    }
+
+    .counterAddstl{
+        font-size: 16px;
+        padding: 5px 10px;
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+
+    .infoWrap{
+        font-size: 12px;
+    }
+
+    .counterAddstl{
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 85%;
+    }
+
+    .orderItemImg{
+        width: 60px;
+        height: 60px;
+    }
+  }

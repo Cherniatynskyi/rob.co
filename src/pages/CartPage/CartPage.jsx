@@ -1,6 +1,7 @@
 import { CartList } from "../../components/CartPageComponents/CartList/CartList"
 import { OrderBlock } from "../../components/CartPageComponents/OrderBlock/OrderBlock"
 import { useEffect } from "react"
+import css from './CartPage.module.css'
 
 
 const CartPage = () => {
@@ -8,7 +9,7 @@ const CartPage = () => {
     window.scrollTo(0, 0)
   }, [])
     return (
-      <div style={{padding: "80px 0", display: "flex"}}>
+      <div className={css.pageWrap}>
         <CartList/>
         <OrderBlock/>
       </div>

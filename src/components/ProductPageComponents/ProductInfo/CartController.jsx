@@ -42,7 +42,7 @@ export const CartController = ({item}) => {
             <span className={css.counterValue}>{counter}</span>
             <button onClick={(e)=>quantHandler(e)} id='increase' className={css.counterButton}><FaPlus /></button>
         </div>
-        <button onClick={handleAddToCart} className={css.addBtn}>Додати до кошика</button>
+        <button onClick={handleAddToCart} className={css.addBtn}>До кошика</button>
     </div>
   )
 }

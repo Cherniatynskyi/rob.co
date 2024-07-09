@@ -1,39 +1,39 @@
 .detailsList{
     display: flex;
     gap: 30px;
+    font-size: 20px;
     padding: 50px 0;
+
+    @media screen and (max-width: 550px) {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 550px) {
+        gap: 10px;
+    }
 }
 
 .keysList{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .keyItem{
-    width: 600px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    height: 40px;
-}
-
-.keyItem::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(203, 203, 203);
-}
-
-.valuesList{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.valueItem{
     display: flex;
     align-items: center;
     height: 40px;
+
 }
+
+.span{
+    display: flex;
+    width: 10px;
+    height: 40px;
+    background-color: inherit;
+    border-bottom: 1px solid black;
+    transform: translateY(-18px);
+}
+
+

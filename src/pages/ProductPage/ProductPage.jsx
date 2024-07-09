@@ -33,7 +33,7 @@ const ProductPage = () => {
 
     return (
       <motion.div initial={{y: '-100%'}} animate={{y: "0"}}>
-        <div style={{display: "flex", paddingTop: "100px"}}>
+        <div className={css.mainInfWrap}>
             <ProductImagesNav images={currentItem[0].photo_urls}/>
             <ProductInfo item={currentItem[0]}/>
         </div>

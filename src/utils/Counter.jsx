@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { increaseCounter, decreaseCounter } from '../redux/Items/itemsSlice';
 
-export const Counter = ({item, value}) => {
+export const Counter = ({item, value, style}) => {
 
     const [counter, setCounter] = useState(value)
     const dispatch = useDispatch()
@@ -21,7 +21,7 @@ export const Counter = ({item, value}) => {
         dispatch(increaseCounter(item))
     }
   return (
-    <div className={css.counterWrap}>
+    <div className={`${css.counterWrap} ${style}`}>
         <button onClick={(e)=>quantHandler(e)} id='decrease' disabled={counter === 1} className={css.counterButton}><FaMinus /></button>
         <span className={css.counterValue}>{counter}</span>
         <button onClick={(e)=>quantHandler(e)} id='increase' className={css.counterButton}><FaPlus /></button>

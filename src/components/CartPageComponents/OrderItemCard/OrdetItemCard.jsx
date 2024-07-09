@@ -18,13 +18,13 @@ export const OrdetItemCard = ({item, quantity}) => {
     <div className={css.orderItemWrap}>
         <img className={css.orderItemImg} src={item.photo_urls[0]} alt="" />
         <div className={css.infoWrap}>
-            <h3>{item.title}</h3>
+            <h3>{`${item.title}`.slice(0, 30)}</h3>
             <span className={css.price}>₴ {item.price} x{quantity}</span>
             <span className={css.priceTotal}>₴ {item.price * quantity}</span>
         </div>
         <div className={css.controlsWrap}>
             <button onClick={handelDelete} className={css.deleteBtn}><MdDelete /></button>
-            <Counter item={item.title} value={quantity}/>
+            <Counter item={item.title} value={quantity} style={css.counterAddstl}/>
         </div>
     </div>
   )
