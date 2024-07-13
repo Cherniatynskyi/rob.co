@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { ItemsSlice } from "./Items/itemsSlice";
-// import { MenuSlice } from "./menuSlice";
+import { menusSlice } from "./menusSlice";
 import storage from 'redux-persist/lib/storage';
 import {
     persistStore,
@@ -24,7 +24,7 @@ const persistedItemsReducer = persistReducer(persistConfig, ItemsSlice.reducer);
 export const store = configureStore({
     reducer: {
         items: persistedItemsReducer,
-        // menu: MenuSlice.reducer,
+        menu: menusSlice.reducer
     },
     middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

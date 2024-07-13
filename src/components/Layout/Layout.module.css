@@ -45,10 +45,16 @@
 .burgerBtn{
     background-color: inherit;
     font-size: 30px;
+    cursor: pointer;
 
     @media screen and (min-width: 750px) {
         display: none;
     }
+}
+@media screen and (max-width: 750px) {
+    .navList{
+        display: none
+    };
 }
 
 .navItem{
