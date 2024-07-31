@@ -6,7 +6,7 @@ import {StandartButton} from '../../../utils/StandartButton'
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter, setPage } from "../../../redux/Items/itemsSlice";
 
-export const Filter = () => {
+export const Filter = ({closeModal = ()=>{}}) => {
 
   const dispatch = useDispatch()
 
@@ -29,6 +29,7 @@ export const Filter = () => {
     }
     dispatch(setFilter(filterValues))
     dispatch(setPage(1))
+    closeModal()
   }
 
   const handleCategoryChange = (e) =>{
@@ -88,7 +89,7 @@ export const Filter = () => {
                       checked={categoryValue === "homepod"}    
                       onChange={(e)=>handleCategoryChange(e)}                    
                     />
-                    <img className={css.checkmark} src="https://content1.rozetka.com.ua/goods/images/big/252305257.jpg" alt="" />
+                    <img className={css.checkmark} src="https://content.rozetka.com.ua/goods/images/big/319305757.jpg" alt="" />
                 </label>
           </div>
           </fieldset>

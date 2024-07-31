@@ -1,14 +1,22 @@
 import { Filter } from "../../components/BrowsePageComponents/Filter/Filter"
+import { FilterModal } from "./FilterModal"
 import { Pagintation } from "../../components/BrowsePageComponents/Pagination/Pagintation"
 import { ProductsList } from "../../components/BrowsePageComponents/ProductsList/ProductsList"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getCategoryThunk } from "../../redux/Items/operations"
 import {motion} from 'framer-motion'
+import css from './BrowsePage.module.css'
+import { LuSettings2 } from "react-icons/lu";
 
 const BrowsePage = () => {
   const dispatch = useDispatch()
   const {items, filters, page} = useSelector(state => state.items)
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
+
+  const onModalClose = () =>{
+    setIsFilterOpen(false)
+  }
 
   useEffect(() => {
     dispatch(getCategoryThunk({...filters, page}))
@@ -16,13 +24,17 @@ const BrowsePage = () => {
   }, [dispatch, filters, page])
 
     return (
-      <motion.div initial={{x: '-100%'}} animate={{x: "0"}} style={{padding: "50px 0 80px 0", display:'flex'}}>
-        <Filter/>
+      <motion.div initial={{x: '-100%'}} animate={{x: "0"}} className={css.browsePage}>
+        <div className={css.filterWrap}>
+          <Filter/>
+        </div>
 
         <div>
             <ProductsList products = {items}/>
             <Pagintation/>
         </div>
+        <button onClick={()=> setIsFilterOpen(true)} className={css.filterBtn}><LuSettings2 /></button>
+        {isFilterOpen && <FilterModal onClose = {onModalClose}/>}
       </motion.div>
     )
 }
